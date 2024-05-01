@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowAgri - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/banner-bg.png'); /* Adjust the path as needed */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll; /* Add scrollability */
+            color: #fff; /* Text color set to white for better visibility */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative; /* Added position relative */
+        }
+        .btn-predict {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .btn-predict:hover {
+            background-color: #218838;
+        }
+        .heading {
+            color: #007bff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .description {
+            color: #6c757d;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .fa-seedling {
+            color: #28a745;
+            font-size: 64px;
+        }
+        .info-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .info-heading {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .info-text {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact-details {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <i class="fas fa-seedling fa-3x"></i>
+    <h1 class="heading">Welcome to GrowAgri</h1>
+    <p class="description">Let's predict the most suitable crop for your conditions!</p>
+    <form action="{% url 'predict_form' %}" method="get">
+        <button class="btn btn-predict" type="submit">Predict</button>
+    </form>
+
+    <div class="info-section">
+        <h2 class="info-heading">About GrowAgri</h2>
+        <p class="info-text">GrowAgri is a project aimed at assisting farmers in predicting the most suitable crops for their agricultural conditions. By providing data on nitrogen, phosphorus, potassium, temperature, humidity, pH value, and rainfall, GrowAgri offers tailored crop recommendations.</p>
+        <p class="info-text">Our mission is to improve agricultural productivity and sustainability by leveraging data-driven insights to optimize crop selection.</p>
+        <p class="contact-details">For inquiries, please contact us at: <a href="mailto:aniketsinghrajput810@gmail.com">aniketsinghrajput810@gmail.com</a></p>
+    </div>
+</div>
+
+</body>
+</html>
